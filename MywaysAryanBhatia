@@ -1,0 +1,19 @@
+let phoneNumber=8800269925;
+function fizzbuzzPhoneNumber(phoneNumber) {
+const digits = phoneNumber.toString().split('');
+let numSum = 0;
+for (let i = 0; i < digits.length; i++) {
+  numSum += parseInt(digits[i]);
+}
+  for (let i = 1; i <= numSum; i++) {
+    if (i % 4 === 0 && i % 5 === 0) {
+      process.stdout.write('FizzBuzz ');
+    } else if (i % 4 === 0) {
+      process.stdout.write('Fizz ');
+    } else if (i % 5 === 0) {
+      process.stdout.write('Buzz ');
+    } else {
+      process.stdout.write(i + ' ');
+    }
+  }
+}
